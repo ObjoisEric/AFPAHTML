@@ -1,0 +1,15 @@
+td,tr, table{
+    border: solid 1px black;
+    text-align: left;
+    border-collapse: collapse ;
+}
+.blueBackground{
+    background-color: blue;
+    color: yellow;
+}
+.redBackground{
+    background-color: red;
+}
+.greenBackground{
+    background-color: green;
+}

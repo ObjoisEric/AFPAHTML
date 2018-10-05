@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="fr-fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="Source/style.css"/>
+    <meta charset="utf-8"/>
+    <title>Acceuil</title>
+</head>
+<body>
+<div>
+    <h1>Acceuil</h1></div>
+<div id="barreAcceuil">
+    <ul>
+        <li class="ligneAcceuil">
+            <a href="Acceuil.html">
+                Accueil
+            </a>
+        </li>
+        <li class="ligneAcceuil">
+            <a href="Utilisateur/Utilisateur.html">
+                Utilisateur
+            </a>
+        </li>
+        <li class="ligneAcceuil">
+            <a href="Produit/Produit.html">
+                Produit
+            </a>
+        </li>
+        <li class="ligneAcceuil">
+            <a href="Connexion/Connexion.html">
+                Connexion
+            </a>
+        </li>
+    </ul>
+
+
+</div>
+<div>
+    <a href="Utilisateur/Utilisateur.html">
+        <img src="Source/imagesUtilisateur.jpg" alt="image pour utilisateur" id="imageUtilisateur"
+             title="utilisateur"/>
+    </a>
+</div>
+
+<div>
+    <a href="Produit/Produit.html">
+        <img src="Source/imageProduit.jpg" alt="image pour produit" id="imageProduit"
+             title="produit"/>
+    </a>
+</div>
+<div>
+    <form>
+        <label for="date">date : </label>
+        <span class="InputFormulaire">
+                    <input type="date" name="date" id="date" placeholder="date"><br/>
+                </span>
+        <label for="color">color : </label>
+        <span class="InputFormulaire">
+                    <input type="color" name="color" id="color"><br/>
+                </span>
+        <label for="number">number : </label>
+        <span class="InputFormulaire">
+                    <input type="number" name="number" id="number" placeholder="number"><br/>
+                </span>
+        <label for="checkbox">checkbox : </label>
+        <span class="InputFormulaire">
+                    <input type="checkbox" name="checkbox" id="checkbox" placeholder="checkbox"><br/>
+                </span>
+        <label for="radio">radio : </label>
+        <span class="InputFormulaire">
+                    <input type="radio" name="radio" id="radio" placeholder="radio"><br/>
+        </span>
+    </form>
+</div>
+<script>
+    console.log("test js");
+    console.log("test");
+    var a =10;
+    var b=6;
+    console.log(a+b);
+    console.log(typeof (a));
+    a="test";
+    console.log(typeof (a));
+    var c;
+    console.log(typeof(c));
+    console.log(c+14);
+    console.log(isNaN(c));
+    a =10;
+    console.log(isNaN(a));
+    /*var nom = prompt("veuillez saisir votre nom ?");
+    console.log(nom);
+    console.log(typeof (nom));*/
+    var age = prompt("veuillez saisir votre age ?");
+    console.log(age);
+    console.log(typeof (age));
+    age= Number(age);
+    age += 10;
+    console.log(age);
+    console.log(typeof (age));
+
+    if(age < 30) {
+        console.log(age + 10);
+    }else{
+        console.log("age superieur ou égal à 30")
+    }
+    var nombre1 = prompt("veuillez saisir votre nombre1 ?");
+    nombre1 = Number(nombre1);
+    var nombre2 = prompt("veuillez saisir votre nombre2 ?");
+    nombre2 = Number(nombre2);
+    var operation = prompt("veuillez saisir votre operation ?");
+
+    switch (operation) {
+        case "+" : console.log("nombre = " + (nombre1+nombre2));
+        break;
+        case "-" : console.log("result = " + (nombre1-nombre2));
+        break;
+        default : console.log("une erreur");
+
+
+    }
+
+</script>
+</body>
+</html>

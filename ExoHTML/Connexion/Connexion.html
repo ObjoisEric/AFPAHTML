@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr-fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="../Source/style.css" />
+    <meta charset="utf-8" />
+    <title>connexion</title>
+</head>
+
+<body>
+    <div>
+        <h2>
+            Connexion
+        </h2>
+    </div>
+    <div>
+        <p>Bonjour,
+            <span class="votreNom">
+                votreNom
+            </span>,
+            vous êtes bien connectés.
+        </p>
+    </div>
+
+    <form method="POST" action="">
+        
+        <fieldset>
+            <legend>Formulaire de connexion :</legend>
+            <div>
+                <label for="nom">login : </label>
+                <span class="InputFormulaire">
+                    <input type="text" name="nom" id="nom" placeholder="nom">
+                </span>
+            </div>
+            <div><label for="mdp">mdp : </label>
+                <span class="InputFormulaire">
+                    <input type="password" name="mdp" id="mdp" placeholder="mot de passe"><br />
+                </span>
+            </div>
+            <div>
+                <input type="submit" id="submit"/>
+            </div>
+
+        </fieldset>
+    </form>
+    <div id="retour">
+        <button type="button" value="Retour à l'acceuil!"><a href="../Acceuil.html">Retour à l'acceuil</a></button>
+    </div>
+</body>
+
+</html>

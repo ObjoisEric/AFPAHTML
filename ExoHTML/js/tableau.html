@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tableau</title>
+    <link rel="stylesheet" href="tableau.css"/>
+</head>
+<body>
+    <p id="valeur"> </p>
+
+    <input type="text" name="operand1" id="operand1" placeholder="nombre 1" onmouseenter="this.style.backgroundColor='red'"/><br/>
+    <input type="text" name="operator" id="operator" placeholder="operation"/><br/>
+    <input type="text" name="operand2" id="operand2" placeholder="nombre 2" /><br/>
+    <button type="button" onclick="calculResultat()">Calcul !</button>
+
+    <p id="resultat"></p>
+    <input type="text" name="operand2" id="nombreChiffre" placeholder="Nombre de chiffre à afficher"/><br/>
+    <input type="text" name="operand2" id="nombreColonne" placeholder="Nombre de colonne"/><br/>
+    <button type="button" onclick="tableauChiffre()">Afficher tableau !</button>
+    <div id="tableau"></div>
+    <script src="tableau.js"></script>
+</body>
+</html>
