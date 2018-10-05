@@ -65,22 +65,29 @@ function division(valeur1, valeur2) {
     return valeur1 / valeur2;
 }
 
-var bonjour = "bonjour";
-bonjour.charAt(0);
-document.write(bonjour.charAt(0) + "<br/>");
-document.write(bonjour.toUpperCase() + "<br/>");
-document.write(bonjour.toLowerCase() + "<br/>");
 
-var tableau = ["un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix"];
+function testAlterCharacter() {
+    var bonjour = "bonjour";
+    var character ="";
 
-for (i = 0; i < tableau.length; i++) {
-    document.write((i + 1) + " " + tableau[i]);
-    document.write("<br/>");
+    bonjour.charAt(0);
+    character += bonjour.charAt(0) + "<br/>";
+    character += bonjour.toUpperCase() + "<br/>";
+    character += bonjour.toLowerCase() + "<br/>";
+
+    var tableau = ["un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix"];
+
+    for (i = 0; i < tableau.length; i++) {
+        character += (i + 1) + " " + tableau[i];
+        character += "<br/>";
+    }
+
+    document.getElementById("testCharacter").innerHTML = character;
 }
 
 document.getElementById("operand1").onmouseleave = (
     function () {
-        document.getElementById("operand1").style.backgroundColor = "#499CF8";
+        document.getElementById("operand1").style.backgroundColor = "green";
     }
 );
 
@@ -97,14 +104,14 @@ function tableauChiffre() {
         solution += "<tr>";
         for (i = 0; i < nombreColonne; i++) {
             if (nombreInitiale <= nombreChiffre) {
-                if ((ligne+nombreColonne) % 2 !== 0) {
-                    if ((nombreInitiale  %2)  !== 0) {
+                if ((ligne + nombreColonne) % 2 !== 0) {
+                    if ((nombreInitiale % 2) !== 0) {
                         valeurFondCouleur = 2;
                     } else {
                         valeurFondCouleur = 1;
                     }
-                }else{
-                    if (((nombreInitiale+ligne)  %2)  !== 0) {
+                } else {
+                    if (((nombreInitiale + ligne) % 2) !== 0) {
                         valeurFondCouleur = 1;
                     } else {
                         valeurFondCouleur = 2;
@@ -112,12 +119,15 @@ function tableauChiffre() {
                 }
 
                 switch (valeurFondCouleur) {
-                    case 1 : solution += "<td class = \"redBackground\">" + (nombreInitiale++) + "</td>";
-                    break;
-                    case 2 : solution += "<td class = \"blueBackground\">" + (nombreInitiale++) + "</td>";
-                    break;
-                    default : solution += "<td class = \"greenBackground\">" + (nombreInitiale++) + "</td>";
-                    break;
+                    case 1 :
+                        solution += "<td class = \"redBackground\">" + (nombreInitiale++) + "</td>";
+                        break;
+                    case 2 :
+                        solution += "<td class = \"blueBackground\">" + (nombreInitiale++) + "</td>";
+                        break;
+                    default :
+                        solution += "<td class = \"greenBackground\">" + (nombreInitiale++) + "</td>";
+                        break;
                 }
 
             }
@@ -137,4 +147,14 @@ function ajoutSolution(phraseActuel, valeurActuel) {
     }
 
     return phraseActuel;
+}
+
+
+var mesTitres = document.getElementsByClassName("name");
+
+console.log(mesTitres);
+
+for(var i =0; i < mesTitres.length;i++) {
+
+    mesTitres[i].innerHTML = "Même titre pour tout le monde"
 }
